@@ -12,7 +12,7 @@ package bestdeal;
  */
     public class Depot {
 
-    private String id_depot;
+    private int id_depot;
     private String adresse_depot;
 
     public String getAdresse_depot() {
