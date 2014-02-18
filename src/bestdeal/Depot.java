@@ -15,7 +15,7 @@ package bestdeal;
     private int id_depot;
     private String adresse_depot;
 
-    public String getAdresse_dept() 
+    public String getAdresse_depot() 
     {
         return adresse_depot;
     }
