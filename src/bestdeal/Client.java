@@ -8,19 +8,16 @@ public class Client
     private String Prenom;
     private String username;
     private String pwd;
-    private String Adress;
+    private String mail;
 
-    public Client(String Nom, String Prenom, String username, String pwd, String Adress) 
+    public Client(String Nom, String Prenom, String username, String pwd, String mail) 
     {
         this.Nom = Nom;
         this.Prenom = Prenom;
         this.username = username;
         this.pwd = pwd;
-        this.Adress = Adress;
+        this.mail = mail;
     }
-
-    
-
     public void setNom(String Nom) 
     {
         this.Nom = Nom;
@@ -41,9 +38,9 @@ public class Client
         this.pwd = pwd;
     }
 
-    public void setAdress(String Adress) 
+    public void setAdress(String mail) 
     {
-        this.Adress = Adress;
+        this.mail = mail;
     }
 
     public String getNom() 
@@ -66,9 +63,9 @@ public class Client
         return pwd;
     }
 
-    public String getAdress() 
+    public String getMail() 
     {
-        return Adress;
+        return mail;
     }
     @Override
     public int hashCode() 
@@ -96,8 +93,5 @@ public class Client
             return false;
         }
         return true;
-    }
-
-    
-    
+    }  
 }
