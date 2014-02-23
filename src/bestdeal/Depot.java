@@ -1,19 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package bestdeal;
+    
+public class Depot 
+    {
 
-/**
- *
- * @author MON DELL
- */
-    public class Depot {
-
-    private int id_depot;
-    private String adresse_depot;
+        private int id_depot;
+        private String adresse_depot;
 
     public String getAdresse_depot() 
     {
@@ -34,5 +25,6 @@ package bestdeal;
     {
         this.id_depot = id_dep;
     }
+    
 
 }
