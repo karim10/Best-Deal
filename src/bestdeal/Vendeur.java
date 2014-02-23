@@ -2,14 +2,16 @@ package bestdeal;
 
 public class Vendeur extends Client 
 {
+    private final String adress;
     private int numtel;
     private int cin;
 
-    public Vendeur(String Nom, String Prenom, String username, String pwd, String Adress,int cin,int numtel) 
+    public Vendeur(String Nom, String Prenom, String username, String pwd, String mail,int cin,int numtel,String adress) 
     {
-        super(Nom, Prenom, username, pwd, Adress);
+        super(Nom, Prenom, username, pwd, mail);
         this.cin=cin;
         this.numtel=numtel;
+        this.adress=adress;
     }
 
     public int getNumtel() 
