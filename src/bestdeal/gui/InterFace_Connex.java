@@ -18,7 +18,6 @@ public class InterFace_Connex extends javax.swing.JFrame {
 
    public  static String usern;
    public  static String psw;
-   public 
     /**
      * Creates new form InterFace_Connex
      */
@@ -111,16 +110,12 @@ public class InterFace_Connex extends javax.swing.JFrame {
         Client Client=new Client(login,pass);
 	if (ClientDao.findClient(login,pass).equals(Client))
 	{
-		new Interface_Principal().setVisible(true);
+		new Interface_Principal(ClientDao.findClient(login,pass)).setVisible(true);
 	}
          
        // System.out.println(usern);
     }//GEN-LAST:event_btnLoginActionPerformed
-    public static Client getparam()
-    {ClientDao ClientDao=new ClientDao();
-        System.out.println(usern);
-  return ClientDao.findClient(usern,psw);
-    }
+
    
     /**
      * @param args the command line arguments

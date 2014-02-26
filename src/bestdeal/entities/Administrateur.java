@@ -1,4 +1,4 @@
-package bestdeal;
+package bestdeal.entities;
 
 public class Administrateur 
 
