@@ -6,12 +6,19 @@
 
 package bestdeal.gui;
 
+import bestdeal.dao.ClientDao;
+import bestdeal.entities.Client;
+
 /**
  *
  * @author Damine
  */
 public class InterFace_Connex extends javax.swing.JFrame {
 
+
+   public  static String usern;
+   public  static String psw;
+   public 
     /**
      * Creates new form InterFace_Connex
      */
@@ -59,17 +66,17 @@ public class InterFace_Connex extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnLogin)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtuser, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txtpwd)))
-                .addContainerGap(171, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtpwd, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtuser, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -82,9 +89,9 @@ public class InterFace_Connex extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtpwd, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                .addGap(18, 18, 18)
                 .addComponent(btnLogin)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         txtuser.getAccessibleContext().setAccessibleName("");
@@ -98,15 +105,23 @@ public class InterFace_Connex extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
 
-        
+        ClientDao ClientDao=new ClientDao();
         String login = txtuser.getText();
-	String pass = txtpwd.getPassword().toString();
-	//if ()
+	String pass = new String (txtpwd.getPassword());
+        Client Client=new Client(login,pass);
+	if (ClientDao.findClient(login,pass).equals(Client))
 	{
-		//action a faire si tu es authentifié
+		new Interface_Principal().setVisible(true);
 	}
+         
+       // System.out.println(usern);
     }//GEN-LAST:event_btnLoginActionPerformed
-
+    public static Client getparam()
+    {ClientDao ClientDao=new ClientDao();
+        System.out.println(usern);
+  return ClientDao.findClient(usern,psw);
+    }
+   
     /**
      * @param args the command line arguments
      */
