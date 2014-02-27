@@ -10,10 +10,6 @@ import bestdeal.dao.DealDAO;
 import bestdeal.entities.Deal;
 import bestdeal.entities.Vendeur;
 
-/**
- *
- * @author Chiheb
- */
 public class TestDeal {
     
  

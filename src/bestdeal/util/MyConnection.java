@@ -10,10 +10,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- *
- * @author KarimBY
- */
 public class MyConnection {
 
    private static final  String driver = "com.mysql.jdbc.Driver";

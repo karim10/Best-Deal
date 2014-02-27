@@ -9,10 +9,6 @@ package bestdeal.gui;
 import bestdeal.dao.VendeurDAO;
 import org.jdesktop.observablecollections.ObservableCollections;
 
-/**
- *
- * @author Chiheb
- */
 public class affVendeur extends javax.swing.JFrame {
     VendeurDAO dAO = new VendeurDAO();
     

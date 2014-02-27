@@ -8,10 +8,6 @@ package bestdeal.gui;
 
 import bestdeal.entities.Client;
 
-/**
- *
- * @author KarimBY
- */
 public class Interface_Principal extends javax.swing.JFrame {
 
     /**

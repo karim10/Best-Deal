@@ -9,10 +9,6 @@ package bestdeal.gui;
 import bestdeal.dao.ClientDao;
 import bestdeal.entities.Client;
 
-/**
- *
- * @author Damine
- */
 public class InterFace_Connex extends javax.swing.JFrame {
 
 

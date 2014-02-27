@@ -6,10 +6,6 @@
 
 package bestdeal.gui;
 
-/**
- *
- * @author KarimBY
- */
 public class Interface_inscription extends javax.swing.JFrame {
 
     /**

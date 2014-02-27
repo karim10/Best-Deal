@@ -9,10 +9,6 @@ package bestdeal.gui;
 import bestdeal.dao.DealDAO;
 import bestdeal.entities.Deal;
 
-/**
- *
- * @author Chiheb
- */
 public class AjoutDeal extends javax.swing.JFrame {
 
     /**

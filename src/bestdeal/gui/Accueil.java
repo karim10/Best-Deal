@@ -6,10 +6,6 @@
 
 package bestdeal.gui;
 
-/**
- *
- * @author Chiheb
- */
 public class Accueil extends javax.swing.JFrame {
 
     /**

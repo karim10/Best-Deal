@@ -6,10 +6,6 @@
 
 package bestdeal.gui;
 
-/**
- *
- * @author Chiheb
- */
 public class First extends javax.swing.JFrame {
 
     /**

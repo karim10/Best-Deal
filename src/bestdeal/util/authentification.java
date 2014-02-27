@@ -6,10 +6,6 @@
 
 package bestdeal.util;
 
-/**
- *
- * @author KarimBY
- */
 public class authentification {
     
 }

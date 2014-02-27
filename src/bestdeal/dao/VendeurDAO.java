@@ -1,10 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package bestdeal.dao;
-
 import bestdeal.entities.Vendeur;
 import bestdeal.util.MyConnection;
 import java.sql.PreparedStatement;
@@ -14,13 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Karray
- */
 public class VendeurDAO {
-
-
     public void insertVendeur(Vendeur st){
            // DepotDAO depdao=new DepotDAO();
 
@@ -73,7 +61,6 @@ public class VendeurDAO {
             System.out.println("erreur lors de la suppression "+ex.getMessage());
         }
     }
-
 
       public Vendeur findVendeurByNum(int num){
 

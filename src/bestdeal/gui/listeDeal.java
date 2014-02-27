@@ -9,10 +9,6 @@ package bestdeal.gui;
 import bestdeal.dao.DealDAO;
 import org.jdesktop.observablecollections.ObservableCollections;
 
-/**
- *
- * @author Chiheb
- */
 public class listeDeal extends javax.swing.JFrame {
 
     DealDAO dAO = new DealDAO();
